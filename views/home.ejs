@@ -1,0 +1,19 @@
+
+ <%- include("partial/header")  -%>
+    <h1>home</h1>
+<p><%= para1 %></p>
+
+
+<% for(var i=0;i<para4.length;i++){ %>
+    <h1> <%=  para4[i].post %> </h1>
+    <% var length = 100;%>
+        <%   var myString = para4[i].text;%>
+        <%  var myTruncatedString = myString.substring(0,length);   %>
+        <p> 
+             <%= myTruncatedString +"..." %> 
+            <a href="/post/<%=para4[i].post %>">read more</a>
+            </p>
+<% } %>
+
+<!-- <p> <%= para4.text %> </p> -->
+<%- include("partial/footer")  -%>
